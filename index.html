@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Sweet Somethings · Small-Batch Home Bakery · Made with Love</title>
-<meta name="description" content="Sweet Somethings is Ashley's small-batch home bakery. Cookies, muffins, and breads baked from scratch with real ingredients — order through TikTok." />
+<meta name="description" content="Sweet Somethings is Ashley's small-batch home bakery. Cinnamon rolls, chocolate chip cookies, and lemon crinkle cookies baked from scratch with real ingredients — order through Instagram." />
 
 <!-- ===== Favicons (cookie icon from the Sweet Somethings logo) ===== -->
 <link rel="icon" href="favicon.ico" sizes="48x48" />
@@ -21,7 +21,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Sweet Somethings" />
 <meta property="og:title" content="Sweet Somethings · Small-Batch Home Bakery" />
-<meta property="og:description" content="Cookies, muffins & breads baked from scratch in small batches by Ashley. Made with love — DM on TikTok to order." />
+<meta property="og:description" content="Cinnamon rolls, chocolate chip cookies & lemon crinkle cookies baked from scratch in small batches by Ashley. Made with love — DM on Instagram to order." />
 <meta property="og:url" content="https://YOUR-USERNAME.github.io/sweet-somethings/" /><!-- UPDATE ME -->
 <meta property="og:image" content="https://YOUR-USERNAME.github.io/sweet-somethings/og-image.png" /><!-- UPDATE ME -->
 <meta property="og:image:width" content="1200" />
@@ -29,7 +29,7 @@
 <meta property="og:image:alt" content="Sweet Somethings — Made with Love. Watercolor logo with a cupcake, mixing bowl, and chocolate chip cookie." />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Sweet Somethings · Small-Batch Home Bakery" />
-<meta name="twitter:description" content="Cookies, muffins & breads baked from scratch in small batches. Made with love ♡" />
+<meta name="twitter:description" content="Cinnamon rolls, chocolate chip cookies & lemon crinkle cookies baked from scratch in small batches. Made with love ♡" />
 <meta name="twitter:image" content="https://YOUR-USERNAME.github.io/sweet-somethings/og-image.png" /><!-- UPDATE ME -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,7 +37,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --cream:#FDF6EC; --paper:#FBF1E2; --navy:#22395B; --navy-soft:#3B5378;
+    --cream:#FDF6EC; --paper:#FBF1E2; --navy:#6A4E3B; --navy-soft:#8A6D59;
     --blush:#F2A0A6; --blush-soft:#FAD8DA; --sage:#9FB07E; --sage-soft:#E4EAD3;
     --brown:#8A5A33; --butter:#E9C98F; --ink:#4A3A2C;
   }
@@ -122,29 +122,39 @@
 
   /* ---------- About ---------- */
   .about{background:var(--paper)}
-  .about-grid{display:grid;grid-template-columns:300px 1fr;gap:46px;align-items:center}
-  @media(max-width:760px){.about-grid{grid-template-columns:1fr;text-align:center}}
-  .portrait{
-    width:240px;height:240px;border-radius:50%;background:var(--blush-soft);
-    border:4px solid var(--blush);display:flex;align-items:center;justify-content:center;margin:0 auto;
-    position:relative;
-  }
-  .portrait .apron-tag{
-    position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);
-    background:var(--navy);color:var(--cream);font-size:.68rem;font-weight:700;
-    letter-spacing:.14em;padding:6px 16px;border-radius:999px;white-space:nowrap;
+  .about-grid{display:grid;grid-template-columns:7fr 3fr;gap:28px;align-items:start}
+  .about-text{max-width:none}
+  .about-media{display:flex;justify-content:center;padding-top:32px}
+  .about-side-image{
+    display:block;
+    width:100%;
+    max-width:210px;
+    height:auto;
+    margin:0 auto;
   }
   .about h2{font-size:clamp(2rem,4.5vw,2.6rem);margin-bottom:14px}
   .about p{font-weight:500;color:var(--ink);margin-bottom:14px}
-  .about .hand{font-size:1.4rem;color:var(--navy-soft)}
+  .about .script{color:var(--brown)}
+  .about .hand{font-size:1.4rem;color:var(--brown)}
+  @media(max-width:760px){
+    .about-grid{grid-template-columns:1fr;text-align:left}
+    .about-media{padding-top:0}
+    .about-side-image{
+      margin:10px auto 0;
+      width:100%;
+      max-width:140px;
+    }
+  }
 
   /* ---------- Values ---------- */
-  .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+  .values-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:900px;margin:0 auto}
   .value{
     background:#fff;border:1.5px dashed var(--butter);border-radius:16px;padding:22px 20px;
   }
   .value h3{font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);display:flex;align-items:center;gap:8px;margin-bottom:8px}
   .value p{font-size:.88rem;font-weight:500;color:var(--ink)}
+  @media(max-width:900px){.values-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:640px}}
+  @media(max-width:620px){.values-grid{grid-template-columns:1fr;max-width:420px}}
 
   /* ---------- Order ---------- */
   .order{background:var(--navy);color:var(--cream);text-align:center}
@@ -216,7 +226,7 @@
     <svg width="64" height="22" viewBox="0 0 100 35" style="transform:scaleX(-1)"><path d="M2 28 Q50 18 98 8" stroke="#9FB07E" stroke-width="2" fill="none" stroke-linecap="round"/><ellipse cx="15" cy="26" rx="7" ry="3.4" fill="#9FB07E" transform="rotate(-22 15 24)"/><ellipse cx="32" cy="22" rx="7" ry="3.4" fill="#9FB07E" transform="rotate(-24 32 20)"/><ellipse cx="49" cy="18" rx="7" ry="3.4" fill="#9FB07E" transform="rotate(-26 49 16)"/><ellipse cx="66" cy="14" rx="7" ry="3.4" fill="#9FB07E" transform="rotate(-28 66 12)"/><ellipse cx="82" cy="10" rx="7" ry="3.4" fill="#9FB07E" transform="rotate(-30 82 8)"/></svg>
   </div>
   <div class="tagline-ribbon">Made from scratch · Made with love</div>
-  <p class="lead">A tiny home bakery run by Ashley in the hours after her day job. Cookies, muffins, and breads baked in small batches with real ingredients — for friends, family, and friendly faces.</p>
+  <p class="lead">A tiny home bakery run by Ashley in the hours after her day job. Cinnamon rolls, chocolate chip cookies, and lemon crinkle cookies baked in small batches with real ingredients — for friends, family, and friendly faces.</p>
   <div class="ctas">
     <a class="btn btn-primary" href="#order">Order this week's batch</a>
     <a class="btn btn-ghost" href="#bakes">See what's baking</a>
@@ -251,7 +261,7 @@
 
       <article class="bake-card">
         <svg class="doodle" width="76" height="76" viewBox="0 0 60 60"><circle cx="30" cy="30" r="26" fill="#D9A45F"/><circle cx="30" cy="30" r="26" fill="none" stroke="#B27C3E" stroke-width="2.5"/><circle cx="20" cy="22" r="3.6" fill="#6B4226"/><circle cx="38" cy="18" r="3.6" fill="#6B4226"/><circle cx="42" cy="34" r="3.6" fill="#6B4226"/><circle cx="27" cy="38" r="3.6" fill="#6B4226"/><circle cx="16" cy="36" r="3.6" fill="#6B4226"/><circle cx="33" cy="27" r="3.6" fill="#6B4226"/></svg>
-        <h3>Brown Butter Chocolate Chip Cookies</h3>
+        <h3>Chocolate Chip Cookies</h3>
         <div class="hand">crispy edges, soft centers, totally irresistible</div>
         <ul>
           <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Butter browned until golden &amp; nutty</li>
@@ -262,27 +272,27 @@
       </article>
 
       <article class="bake-card">
-        <svg class="doodle" width="76" height="76" viewBox="0 0 60 60"><path d="M12 32 Q10 12 30 12 Q50 12 48 32 Z" fill="#E8C285" stroke="#B98A4C" stroke-width="2"/><path d="M15 32 H45 L41 52 H19 Z" fill="#D9A45F" stroke="#B27C3E" stroke-width="2"/><line x1="22" y1="34" x2="21" y2="50" stroke="#B27C3E" stroke-width="1.6"/><line x1="30" y1="34" x2="29" y2="50" stroke="#B27C3E" stroke-width="1.6"/><line x1="38" y1="34" x2="37" y2="50" stroke="#B27C3E" stroke-width="1.6"/><circle cx="22" cy="20" r="3" fill="#5A6FA8"/><circle cx="33" cy="16" r="3" fill="#5A6FA8"/><circle cx="40" cy="24" r="3" fill="#5A6FA8"/></svg>
-        <h3>Blueberry Streusel Muffins</h3>
-        <div class="hand">bursting with berries &amp; love</div>
+        <svg class="doodle" width="76" height="76" viewBox="0 0 60 60"><circle cx="30" cy="30" r="25.5" fill="#EFCF6A"/><circle cx="30" cy="30" r="25.5" fill="none" stroke="#C49A45" stroke-width="2.4"/><path d="M16 22 q3 -4 9 -2 q5 2 8 -1 q4 -4 10 -2" stroke="#B9883C" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M14 33 q5 -3 10 0 q6 3 11 0 q5 -3 11 1" stroke="#B9883C" stroke-width="1.9" fill="none" stroke-linecap="round"/><path d="M19 41 q5 2 10 0 q7 -3 13 1" stroke="#B9883C" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M24 16 q1 3 -2 5" stroke="#B9883C" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M39 14 q-2 3 1 6" stroke="#B9883C" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M17 18 q3 -2 6 0 q2 1 4 -1 q3 -3 6 0 q2 2 5 0 q3 -3 6 0" stroke="#FFF8EE" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M13 29 q3 -2 6 0 q3 2 6 0 q3 -2 6 0 q3 2 6 0 q3 -2 6 0 q3 2 6 0" stroke="#FFF8EE" stroke-width="2.8" fill="none" stroke-linecap="round"/><path d="M17 39 q4 -2 7 0 q3 2 7 0 q4 -2 7 0 q4 2 8 0" stroke="#FFF8EE" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>
+        <h3>Lemon Crinkle Cookies</h3>
+        <div class="hand">bright citrus flavor with soft, crackly tops</div>
         <ul>
-          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Real butter, real blueberries</li>
-          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Buttermilk batter, homemade streusel top</li>
-          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Ask about lemon zest or raspberry swaps</li>
+          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Fresh lemon zest and juice in every batch</li>
+          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Rolled in sugar for signature crinkles</li>
+          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Soft centers with a bright finish</li>
         </ul>
-        <span class="pill">Breakfast hero</span>
+        <span class="pill">Citrus favorite</span>
       </article>
 
       <article class="bake-card">
-        <svg class="doodle" width="76" height="76" viewBox="0 0 60 60"><ellipse cx="30" cy="34" rx="24" ry="16" fill="#E2B878" stroke="#B27C3E" stroke-width="2"/><path d="M18 24 q5 6 0 14" stroke="#A86F36" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M27 24 q5 6 0 14" stroke="#A86F36" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M36 24 q5 6 0 14" stroke="#A86F36" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-        <h3>Fresh-Baked Breads</h3>
-        <div class="hand">perfect toasted + buttered</div>
+        <svg class="doodle" width="76" height="76" viewBox="0 0 60 60"><ellipse cx="30" cy="33" rx="22" ry="17" fill="#E7C08A"/><ellipse cx="30" cy="33" rx="22" ry="17" fill="none" stroke="#B27C3E" stroke-width="2.2"/><path d="M15 33 C15 25, 24 20, 31 22 C38 24, 42 29, 39 35 C36 41, 28 42, 23 39 C18 36, 18 30, 23 27 C27 24, 33 25, 34 30 C35 34, 31 36, 28 34" fill="none" stroke="#9D6430" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 31 C26 29, 29 29, 30 31 C31 33, 29 35, 27 34" fill="none" stroke="#9D6430" stroke-width="1.6" stroke-linecap="round"/><path d="M14 27 q5 -4 10 -1 q5 3 10 0 q5 -3 11 1 q4 3 9 1" stroke="#F7EFE4" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M12 36 q5 -3 10 0 q5 3 10 0 q5 -3 11 1 q4 3 10 0" stroke="#F7EFE4" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>
+        <h3>Cinnamon Rolls</h3>
+        <div class="hand">soft, swirly, and coated with cinnamon sugar</div>
         <ul>
-          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Rotating loaves — honey oat, cinnamon swirl &amp; more</li>
-          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Slow rises, no shortcuts</li>
-          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Good things take time (even dough)</li>
+          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Hand-rolled spirals with cinnamon sugar filling</li>
+          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Soft interior with lightly golden edges</li>
+          <li><svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Finished with vanilla glaze</li>
         </ul>
-        <span class="pill">Weekly rotation</span>
+        <span class="pill">Freshly rolled</span>
       </article>
 
     </div>
@@ -292,18 +302,15 @@
 <!-- ============ ABOUT ============ -->
 <section class="about" id="about">
   <div class="wrap about-grid">
-    <div>
-      <div class="portrait">
-        <svg width="120" height="120" viewBox="0 0 60 60"><line x1="44" y1="6" x2="30" y2="26" stroke="#8A5A33" stroke-width="4" stroke-linecap="round"/><path d="M30 26 Q14 38 20 52 M30 26 Q22 42 28 54 M30 26 Q30 44 34 54 M30 26 Q40 40 38 52" stroke="#8A5A33" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
-        <div class="apron-tag">BAKE SOMETHING GOOD</div>
-      </div>
-    </div>
-    <div>
+    <div class="about-text">
       <div class="eyebrow">A little about us</div>
       <h2 class="script">Hi, I'm Ashley!</h2>
-      <p>Baker. Dreamer. Food lover. By day I work a regular full-time job — and in the hours after, my kitchen turns into a tiny bakery. Sweet Somethings started with batches for friends and family, and it's growing one cookie at a time.</p>
-      <p>I believe the little things made with care create the sweetest moments. Everything is baked from scratch with real, simple ingredients: real butter, real eggs, real blueberries. Never any preservatives. Made in small batches, with big heart.</p>
-      <div class="hand">baking is my happy place — and I'm so glad you're here ♡</div>
+      <p>A sweet treat lover transforming my kitchen into an Arizona cottage bakery. Sweet Somethings started with batches for friends and family, and it's growing one dessert at a time.</p>
+      <p>I believe the little somethings create the sweetest moments. Everything is baked from scratch with real, simple ingredients.</p>
+      <div class="hand">Baking is my happy place — and I'm so glad you're here ♡</div>
+    </div>
+    <div class="about-media">
+      <img class="about-side-image" src="gem-zimage-6.png" alt="Sweet Somethings baked dessert" />
     </div>
   </div>
 </section>
@@ -349,16 +356,16 @@
   <div class="wrap">
     <div class="eyebrow" style="color:#E9C98F">Small batches — they go fast!</div>
     <h2 class="script">How to Order</h2>
-    <p class="sub">Sweet Somethings lives on TikTok. New batch drops are announced there each week — claiming yours takes about thirty seconds.</p>
+    <p class="sub">Sweet Somethings lives on Instagram. New batch drops are announced there each week — claiming yours takes about thirty seconds.</p>
     <div class="steps">
       <div class="step">
         <div class="num">1</div>
         <h3>Follow along</h3>
-        <p>Find us on TikTok for weekly lineups, cozy baking videos, and fresh batch drops.</p>
+        <p>Find us on Instagram for weekly lineups, cozy baking videos, and fresh batch drops.</p>
       </div>
       <div class="step">
         <div class="num">2</div>
-        <h3>DM "COOKIES" 🍪</h3>
+        <h3>DM "SWEETS" 🍪</h3>
         <p>Message us with what you'd like from this week's bakes before the batch sells out.</p>
       </div>
       <div class="step">
@@ -374,7 +381,7 @@
 <!-- ============ FRIDAY BANNER ============ -->
 <div class="friday">
   <div class="script">Fresh Batch Friday</div>
-  <p>Every week: a dozen brown butter chocolate chip cookies, baked fresh &amp; boxed with a handwritten note. DM early — when they're gone, they're gone!</p>
+  <p>Every week: cinnamon rolls, chocolate chip cookies, and lemon crinkle cookies baked fresh &amp; boxed with care. DM early — when they're gone, they're gone!</p>
 </div>
 
 <!-- ============ TIPS & PAIRINGS ============ -->
@@ -394,8 +401,8 @@
       <h3><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.8-9.2C.6 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.6h4c.9-1.5 2.3-2.6 4.3-2.6 3.4 0 5.1 3.6 3.5 6.8C19.5 16.1 12 21 12 21z" fill="#F2A0A6"/></svg>Perfect pairings</h3>
       <ul>
         <li class="pairing"><span>Warm cookie</span><em>+ cold milk</em></li>
-        <li class="pairing"><span>Blueberry muffin</span><em>+ hot coffee</em></li>
-        <li class="pairing"><span>Toasted honey oat bread</span><em>+ salted butter</em></li>
+        <li class="pairing"><span>Lemon crinkle cookie</span><em>+ hot tea</em></li>
+        <li class="pairing"><span>Warm cinnamon roll</span><em>+ hot coffee</em></li>
         <li class="pairing"><span>Any bake at all</span><em>+ someone to share it with ♡</em></li>
       </ul>
     </div>
@@ -406,10 +413,10 @@
 <footer>
   <div class="note">
     <div class="eyebrow" style="margin-bottom:12px">A note from Ashley ♡</div>
-    <div class="hand">Thank you for supporting our small business and being part of our story. Every cookie, muffin, and loaf is made with intention, gratitude, and a whole lot of heart. We can't wait to bake something sweet for you!</div>
+    <div class="hand">Thank you for supporting our small business and being part of our story. Every cinnamon roll and cookie is made with intention, gratitude, and a whole lot of heart. We can't wait to bake something sweet for you!</div>
     <div class="sig">With love, Ashley</div>
   </div>
-  <div class="foot-meta">Sweet Somethings · Small-batch home bakery · Find us on TikTok to order</div>
+  <div class="foot-meta">Sweet Somethings · Small-batch home bakery · Find us on Instagram to order</div>
   <div class="foot-tag">Real food · Real connections · Real goodness</div>
 </footer>
 
